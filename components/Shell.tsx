@@ -1,0 +1,5 @@
+'use client';
+import Link from 'next/link';
+import {usePathname} from 'next/navigation';
+import {useEffect,useState} from 'react';
+export default function Shell(){const path=usePathname();const [open,setOpen]=useState(false);useEffect(()=>{setOpen(false)},[path]);useEffect(()=>{const escape=(e:KeyboardEvent)=>{if(e.key==='Escape')setOpen(false)};window.addEventListener('keydown',escape);return()=>window.removeEventListener('keydown',escape)},[]);return <header className={path==='/'?'header home-header':'header'}><Link className="wordmark" href="/" aria-label="ATELIER — Início">ATELIER<span>ARQUITETURA & INTERIORES</span></Link><button className="menu-toggle" aria-expanded={open} aria-controls="navigation" onClick={()=>setOpen(!open)}>{open?'Fechar −':'Menu +'}</button><nav id="navigation" className={open?'nav open':'nav'} aria-label="Navegação principal">{[['/projetos','Projetos'],['/estudio','O estúdio'],['/servicos','Serviços'],['/contacto','Vamos conversar ↗']].map(([href,label])=><Link key={href} href={href} aria-current={path===href?'page':undefined}>{label}</Link>)}</nav></header>}
