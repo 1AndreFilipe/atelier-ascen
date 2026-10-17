@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <section className="section page-section"><p className="eyebrow">404 — UM ESPAÇO POR DESENHAR</p><h1>Este lugar<br/>não <em>existe.</em></h1><Link className="text-link" href="/projetos">Voltar aos projetos ↗</Link></section>}
