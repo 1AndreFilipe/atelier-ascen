@@ -1,0 +1,3 @@
+import ContactForm from '@/components/ContactForm';
+export const metadata={title:'Contacto'};
+export default function Contact(){return <section className="section page-section"><p className="eyebrow">VAMOS CONVERSAR</p><h1>Tudo começa<br/>com uma <em>ideia.</em></h1><div className="contact-grid"><div><p className="lead">Um lugar para viver.<br/>Uma nova forma de habitar.<br/>Conte-nos o que imagina.</p><div className="contact-note"><p className="eyebrow">UMA EXPERIÊNCIA ASCEN</p><p>O ATELIER é um estúdio fictício. Pode experimentar este formulário, mas os seus dados não são enviados nem guardados.</p><p>Não existem contactos, clientes ou moradas reais associados a este conceito.</p></div></div><ContactForm/></div></section>}
